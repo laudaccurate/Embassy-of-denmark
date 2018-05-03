@@ -9,7 +9,7 @@ block main
           .top-form-group
             .form-group
               label(for="applicationType") Application Type
-              select.form-control(type="text" id="applicatonType" name="applicationType")
+              select.form-control(required type="text" id="applicatonType" name="applicationType")
                 option(value="new") New
                 option(value="renewal") Renewal
                 option(value="missing") Missing
@@ -17,12 +17,12 @@ block main
                 option(value="damaged") Damaged
             .form-group
               label(for="passportType") Passport Type
-              select.form-control(type="text" id="passportType" name="passportType")
+              select.form-control( required type="text" id="passportType" name="passportType")
                 option(value="ordinary") Ordinary
                 
             .form-group
               label(for="applicationPrority") Application Priority
-              select.form-control(type="text" id="applicationPrority" name="applicationPrority")
+              select.form-control( required type="text" id="applicationPrority" name="applicationPrority")
                 option(value="#") Select One...
                 option(value="new") New
                 option(value="renewal") Renewal
@@ -34,11 +34,11 @@ block main
             .form-group
               label(for="surname") Surname
               label.star *
-              input.form-control(type="text" id="surname" placeholder="Surname" name="surname")
+              input.form-control(required type="text" id="surname" placeholder="Surname" name="surname")
             .form-group
               label(for="firstName") First name
               label.star *
-              input.form-control(type="text" placeholder="First name" id="firstName" name="firstName")
+              input.form-control( required type="text" placeholder="First name" id="firstName" name="firstName")
             .form-group
               label(for="otherNames") Other names
               input.form-control(type="text" placeholder="Other names" id="otherNames" name="otherNames")
@@ -47,30 +47,31 @@ block main
               label(for="maidenName") Maiden name(s)
               input.form-control(type="text" placeholder="Maiden name(s)" id="maidenName" name="maidenName")
             .form-group#affidavit
-              label(for="maidenName") If name has changed by Affidavit or Gazette Publication, provide previous name
-              input.form-control(type="text" placeholder="Previous name if changed" id="maidenName" name="previousName")
+              label(for="previousName") If name has changed by Affidavit or Gazette Publication, provide previous name
+              input.form-control(type="text" placeholder="Previous name if changed" id="previousName" name="previousName")
         .form-section
           .top-form-group
             .form-group
               label(for="dateOfBirth") Date of birth
               label.star *
-              input.form-control(type="date" id="dateOfBirth" name="dateOfBirth")
+              input.form-control(required type="date" id="dateOfBirth" name="dateOfBirth")
             .form-group
               label(for="gender" id="gender") Gender
               label.star *
+              br
               .form-check.form-check-inline
                 input.form-check-input(type="radio" id="male" name="gender" value="male")
                 label.form-check-label Male
               .form-check.form-check-inline
-                input.form-check-input(type="radio" id="female" name="gender" value="femlae")
+                input.form-check-input(type="radio" id="female" name="gender" value="female")
                 label.form-check-label Female
             .form-group
-              label(for="otherNames") City or town of birth
-              input.form-control(type="text" placeholder="Birth city/town" id="otherNames" name="otherNames")
+              label(for="placeOfBirth") City or town of birth
+              input.form-control(type="text" placeholder="Birth city/town" id="placeOfBirth" name="placeOfBirth")
           .bottom-form-group
             .form-group
-              label(for="maidenName") Country of birth
-              select.form-control(type="text" id="maidenName" name="maidenName")
+              label(for="countryOfBirth") Country of birth
+              select.form-control(type="text" id="countryOfBirth" name="countryOfBirth")
                 option Select one...
                 option Afghanistan
                 option Ghana
@@ -137,10 +138,6 @@ block main
               select.form-control(name="countryOfResidence" id="countryOfResidence")
                 option(value="Denmark") Denmark
             .form-group
-              label(for="residentialAddress") Residential address
-                label.star *
-              input.form-control(type="text" name="residentialAddress" id="residentialAddress")
-            .form-group
               label(for="telephone") Telephone
                 label.star *
               input.form-control(name="telephone" id="telephone")
@@ -148,6 +145,11 @@ block main
               label(for="email") Email
                 label.star *
               input.form-control(type="email" name="email" id="email")
+          .bottom-form-group
+            .form-group
+              label(for="residentialAddress") Residential address
+                label.star *
+              input.form-control(type="text" name="residentialAddress" id="residentialAddress")
         .form-section
           p.form-section-name Current/Last Educational Institution attended
           .top-form-group
@@ -276,8 +278,6 @@ block main
             br
             |   And that all the above information is true and correct
 
-          .top-form-group
-            .form-group
         .form-section
           p.form-section-name WITNESS
           .top-form-group

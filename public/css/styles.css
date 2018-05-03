@@ -34,6 +34,7 @@ label, option {
   flex-direction: column;
   border-top: 1px solid rgba(233, 139, 139, 0.842);
   padding: 10px;
+  justify-content: space-between
 }
 
 form :first-child {
@@ -49,7 +50,8 @@ form :first-child {
 }
 
 .form-group {
-  min-width: 30%;
+  /* min-width: 30%; */
+  flex-grow: 1;
 }
 
 .bottom-form-group, .top-form-group {
@@ -58,9 +60,9 @@ form :first-child {
   justify-content: space-between;
 }
 
-#affidavit {
+/* #affidavit {
   width: 65%;
-}
+} */
 
 .main-footer {
   /* overflow: hidden; */

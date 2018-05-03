@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 const path = require("path");
 const pug = require("pug");
 
